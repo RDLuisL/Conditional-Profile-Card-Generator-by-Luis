@@ -31,7 +31,9 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // reset the website body with the new html output
-  document.querySelector("#widget_content").innerHTML = `<div class="widget">
+  document.querySelector(
+    "#widget_content"
+  ).innerHTML = `<div class="widget shadow">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name} ${variables.lastname}</h1>
@@ -41,13 +43,13 @@ function render(variables = {}) {
           <ul class="${variables.socialMediaPosition}">
           
 
-            <li><a href="https://twitter.com/${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a  href="https://twitter.com/${variables.twitter}"><i class="fa fa-twitter"></i></a></li>
             
-            <li><a href="https://github.com/${variables.github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://github.com/${variables.github}"><i class="fa fa-github"></i></a></li>
             
-            <li><a href="https://linkedin.com/${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://linkedin.com/${variables.linkedin}"><i class="fa fa-linkedin"></i></a></li>
             
-            <li><a href="https://instagram.com/${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://instagram.com/${variables.instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -61,9 +63,10 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://www.afpm.org/sites/default/files/styles/event_image/public/2019-01/Petrochemical-is-Produced.jpg?itok=UtISqdrx",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL: "https://imagizer.imageshack.com/img922/8228/6yAvNA.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
